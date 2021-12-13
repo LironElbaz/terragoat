@@ -4,6 +4,7 @@ resource "aws_rds_cluster" "app1-rds-cluster" {
   backup_retention_period = 0
   storage_encrypted = true
   deletion_protection = true
+  iam_database_authentication_enabled = true
 }
 
 resource "aws_rds_cluster" "app2-rds-cluster" {
