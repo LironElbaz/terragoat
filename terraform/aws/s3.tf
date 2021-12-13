@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "data" {
   acl           = "public-read"
   force_destroy = true
   tags = merge({
-    Name        = "${local.resource_prefix.value}-data-changed-name"
+    Name        = "${local.resource_prefix.value}-data-changed-name-2"
     Environment = local.resource_prefix.value
     }, {
     git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
