@@ -3,11 +3,11 @@ resource "aws_s3_bucket" "data" {
   # bucket is not encrypted
   # bucket does not have access logs
   # bucket does not have versioning
-  bucket        = "${local.resource_prefix.value}-data"
+  bucket        = "${local.resource_prefix.value}-data-changed-name-3"
   acl           = "public-read"
   force_destroy = true
   tags = merge({
-    Name        = "${local.resource_prefix.value}-data-changed-name-2"
+    Name        = "${local.resource_prefix.value}-data"
     Environment = local.resource_prefix.value
     }, {
     git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
