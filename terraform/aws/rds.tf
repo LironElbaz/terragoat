@@ -19,6 +19,7 @@ resource "aws_rds_cluster" "app3-rds-cluster" {
   cluster_identifier = "app3-rds-cluster"
   allocated_storage       = 10
   backup_retention_period = 15
+  storage_encrypted = true
 }
 
 resource "aws_rds_cluster" "app4-rds-cluster" {
@@ -55,5 +56,4 @@ resource "aws_rds_cluster" "app9-rds-cluster" {
   cluster_identifier = "app9-rds-cluster"
   allocated_storage       = 10
   backup_retention_period = 25
-  iam_database_authentication_enabled = true
 }
