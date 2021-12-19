@@ -29,6 +29,7 @@ resource "aws_rds_cluster" "app4-rds-cluster" {
   allocated_storage       = 10
   backup_retention_period = 15
   storage_encrypted = true
+  deletion_protection = true
 }
 
 resource "aws_rds_cluster" "app5-rds-cluster" {
